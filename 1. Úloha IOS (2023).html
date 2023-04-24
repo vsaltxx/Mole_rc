@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<!-- saved from url=(0087)https://www.fit.vutbr.cz/study/courses/IOS/public/projekty/projekt1/ios23-projekt1.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="generator" content="pandoc">
+      
+      
+      <title>1. Úloha IOS (2023)</title>
+      <!-- Bootstrap -->
+      <link rel="stylesheet" href="./1. Úloha IOS (2023)_files/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+      <!-- Font-awesome -->
+      <link rel="stylesheet" href="./1. Úloha IOS (2023)_files/font-awesome.min.css">
+      <!-- Styles -->
+      <link rel="stylesheet" href="./1. Úloha IOS (2023)_files/styles.css">
+            <!-- Add favicon here -->
+            <!-- Add site-verifications here -->
+         <style type="text/css">.CtxtMenu_InfoClose {  top:.2em; right:.2em;}
+.CtxtMenu_InfoContent {  overflow:auto; text-align:left; font-size:80%;  padding:.4em .6em; border:1px inset; margin:1em 0px;  max-height:20em; max-width:30em; background-color:#EEEEEE;  white-space:normal;}
+.CtxtMenu_Info.CtxtMenu_MousePost {outline:none;}
+.CtxtMenu_Info {  position:fixed; left:50%; width:auto; text-align:center;  border:3px outset; padding:1em 2em; background-color:#DDDDDD;  color:black;  cursor:default; font-family:message-box; font-size:120%;  font-style:normal; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 15px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius:15px;               /* Safari and Chrome */  -moz-border-radius:15px;                  /* Firefox */  -khtml-border-radius:15px;                /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */  filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color="gray", Positive="true"); /* IE */}
+</style><style type="text/css">.CtxtMenu_MenuClose {  position:absolute;  cursor:pointer;  display:inline-block;  border:2px solid #AAA;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  font-family: "Courier New", Courier;  font-size:24px;  color:#F0F0F0}
+.CtxtMenu_MenuClose span {  display:block; background-color:#AAA; border:1.5px solid;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  line-height:0;  padding:8px 0 6px     /* may need to be browser-specific */}
+.CtxtMenu_MenuClose:hover {  color:white!important;  border:2px solid #CCC!important}
+.CtxtMenu_MenuClose:hover span {  background-color:#CCC!important}
+.CtxtMenu_MenuClose:hover:focus {  outline:none}
+</style><style type="text/css">.CtxtMenu_Menu {  position:absolute;  background-color:white;  color:black;  width:auto; padding:5px 0px;  border:1px solid #CCCCCC; margin:0; cursor:default;  font: menu; text-align:left; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 5px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius: 5px;             /* Safari and Chrome */  -moz-border-radius: 5px;                /* Firefox */  -khtml-border-radius: 5px;              /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */}
+.CtxtMenu_MenuItem {  padding: 1px 2em;  background:transparent;}
+.CtxtMenu_MenuArrow {  position:absolute; right:.5em; padding-top:.25em; color:#666666;  font-family: null; font-size: .75em}
+.CtxtMenu_MenuActive .CtxtMenu_MenuArrow {color:white}
+.CtxtMenu_MenuArrow.CtxtMenu_RTL {left:.5em; right:auto}
+.CtxtMenu_MenuCheck {  position:absolute; left:.7em;  font-family: null}
+.CtxtMenu_MenuCheck.CtxtMenu_RTL { right:.7em; left:auto }
+.CtxtMenu_MenuRadioCheck {  position:absolute; left: .7em;}
+.CtxtMenu_MenuRadioCheck.CtxtMenu_RTL {  right: .7em; left:auto}
+.CtxtMenu_MenuInputBox {  padding-left: 1em; right:.5em; color:#666666;  font-family: null;}
+.CtxtMenu_MenuInputBox.CtxtMenu_RTL {  left: .1em;}
+.CtxtMenu_MenuComboBox {  left:.1em; padding-bottom:.5em;}
+.CtxtMenu_MenuSlider {  left: .1em;}
+.CtxtMenu_SliderValue {  position:absolute; right:.1em; padding-top:.25em; color:#333333;  font-size: .75em}
+.CtxtMenu_SliderBar {  outline: none; background: #d3d3d3}
+.CtxtMenu_MenuLabel {  padding: 1px 2em 3px 1.33em;  font-style:italic}
+.CtxtMenu_MenuRule {  border-top: 1px solid #DDDDDD;  margin: 4px 3px;}
+.CtxtMenu_MenuDisabled {  color:GrayText}
+.CtxtMenu_MenuActive {  background-color: #606872;  color: white;}
+.CtxtMenu_MenuDisabled:focus {  background-color: #E8E8E8}
+.CtxtMenu_MenuLabel:focus {  background-color: #E8E8E8}
+.CtxtMenu_ContextMenu:focus {  outline:none}
+.CtxtMenu_ContextMenu .CtxtMenu_MenuItem:focus {  outline:none}
+.CtxtMenu_SelectionMenu {  position:relative; float:left;  border-bottom: none; -webkit-box-shadow:none; -webkit-border-radius:0px; }
+.CtxtMenu_SelectionItem {  padding-right: 1em;}
+.CtxtMenu_Selection {  right: 40%; width:50%; }
+.CtxtMenu_SelectionBox {  padding: 0em; max-height:20em; max-width: none;  background-color:#FFFFFF;}
+.CtxtMenu_SelectionDivider {  clear: both; border-top: 2px solid #000000;}
+.CtxtMenu_Menu .CtxtMenu_MenuClose {  top:-10px; left:-10px}
+</style><style id="MJX-CHTML-styles">
+mjx-container[jax="CHTML"] {
+  line-height: 0;
+}
+
+mjx-container [space="1"] {
+  margin-left: .111em;
+}
+
+mjx-container [space="2"] {
+  margin-left: .167em;
+}
+
+mjx-container [space="3"] {
+  margin-left: .222em;
+}
+
+mjx-container [space="4"] {
+  margin-left: .278em;
+}
+
+mjx-container [space="5"] {
+  margin-left: .333em;
+}
+
+mjx-container [rspace="1"] {
+  margin-right: .111em;
+}
+
+mjx-container [rspace="2"] {
+  margin-right: .167em;
+}
+
+mjx-container [rspace="3"] {
+  margin-right: .222em;
+}
+
+mjx-container [rspace="4"] {
+  margin-right: .278em;
+}
+
+mjx-container [rspace="5"] {
+  margin-right: .333em;
+}
+
+mjx-container [size="s"] {
+  font-size: 70.7%;
+}
+
+mjx-container [size="ss"] {
+  font-size: 50%;
+}
+
+mjx-container [size="Tn"] {
+  font-size: 60%;
+}
+
+mjx-container [size="sm"] {
+  font-size: 85%;
+}
+
+mjx-container [size="lg"] {
+  font-size: 120%;
+}
+
+mjx-container [size="Lg"] {
+  font-size: 144%;
+}
+
+mjx-container [size="LG"] {
+  font-size: 173%;
+}
+
+mjx-container [size="hg"] {
+  font-size: 207%;
+}
+
+mjx-container [size="HG"] {
+  font-size: 249%;
+}
+
+mjx-container [width="full"] {
+  width: 100%;
+}
+
+mjx-box {
+  display: inline-block;
+}
+
+mjx-block {
+  display: block;
+}
+
+mjx-itable {
+  display: inline-table;
+}
+
+mjx-row {
+  display: table-row;
+}
+
+mjx-row > * {
+  display: table-cell;
+}
+
+mjx-mtext {
+  display: inline-block;
+}
+
+mjx-mstyle {
+  display: inline-block;
+}
+
+mjx-merror {
+  display: inline-block;
+  color: red;
+  background-color: yellow;
+}
+
+mjx-mphantom {
+  visibility: hidden;
+}
+
+_::-webkit-full-page-media, _:future, :root mjx-container {
+  will-change: opacity;
+}
+
+mjx-assistive-mml {
+  position: absolute !important;
+  top: 0px;
+  left: 0px;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 1px 0px 0px 0px !important;
+  border: 0px !important;
+  display: block !important;
+  width: auto !important;
+  overflow: hidden !important;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+mjx-assistive-mml[display="block"] {
+  width: 100% !important;
+}
+
+mjx-c::before {
+  display: block;
+  width: 0;
+}
+
+.MJX-TEX {
+  font-family: MJXZERO, MJXTEX;
+}
+
+.TEX-B {
+  font-family: MJXZERO, MJXTEX-B;
+}
+
+.TEX-I {
+  font-family: MJXZERO, MJXTEX-I;
+}
+
+.TEX-MI {
+  font-family: MJXZERO, MJXTEX-MI;
+}
+
+.TEX-BI {
+  font-family: MJXZERO, MJXTEX-BI;
+}
+
+.TEX-S1 {
+  font-family: MJXZERO, MJXTEX-S1;
+}
+
+.TEX-S2 {
+  font-family: MJXZERO, MJXTEX-S2;
+}
+
+.TEX-S3 {
+  font-family: MJXZERO, MJXTEX-S3;
+}
+
+.TEX-S4 {
+  font-family: MJXZERO, MJXTEX-S4;
+}
+
+.TEX-A {
+  font-family: MJXZERO, MJXTEX-A;
+}
+
+.TEX-C {
+  font-family: MJXZERO, MJXTEX-C;
+}
+
+.TEX-CB {
+  font-family: MJXZERO, MJXTEX-CB;
+}
+
+.TEX-FR {
+  font-family: MJXZERO, MJXTEX-FR;
+}
+
+.TEX-FRB {
+  font-family: MJXZERO, MJXTEX-FRB;
+}
+
+.TEX-SS {
+  font-family: MJXZERO, MJXTEX-SS;
+}
+
+.TEX-SSB {
+  font-family: MJXZERO, MJXTEX-SSB;
+}
+
+.TEX-SSI {
+  font-family: MJXZERO, MJXTEX-SSI;
+}
+
+.TEX-SC {
+  font-family: MJXZERO, MJXTEX-SC;
+}
+
+.TEX-T {
+  font-family: MJXZERO, MJXTEX-T;
+}
+
+.TEX-V {
+  font-family: MJXZERO, MJXTEX-V;
+}
+
+.TEX-VB {
+  font-family: MJXZERO, MJXTEX-VB;
+}
+
+mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
+  font-family: MJXZERO, MJXTEX-S1, MJXTEX-S4, MJXTEX, MJXTEX-A ! important;
+}
+
+@font-face /* 0 */ {
+  font-family: MJXZERO;
+  src: url("https://www.fit.vutbr.cz/study/courses/IOS/public/projekty/projekt1/ios23-projekt1_files/output/chtml/fonts/woff-v2/MathJax_Zero.woff") format("woff");
+}
+
+@font-face /* 1 */ {
+  font-family: MJXTEX;
+  src: url("https://www.fit.vutbr.cz/study/courses/IOS/public/projekty/projekt1/ios23-projekt1_files/output/chtml/fonts/woff-v2/MathJax_Main-Regular.woff") format("woff");
+}
+
+@font-face /* 2 */ {
+  font-family: MJXTEX-B;
+  src: url("https://www.fit.vutbr.cz/study/courses/IOS/public/projekty/projekt1/ios23-projekt1_files/output/chtml/fonts/woff-v2/MathJax_Main-Bold.woff") format("woff");
+}
+
+@font-face /* 3 */ {
+  font-family: MJXTEX-I;
+  src: url("https://www.fit.vutbr.cz/study/courses/IOS/public/projekty/projekt1/ios23-projekt1_files/output/chtml/fonts/woff-v2/MathJax_Math-Italic.woff") format("woff");
+}
+
+@font-face /* 4 */ {
+  font-family: MJXTEX-MI;
+  src: url("https://www.fit.vutbr.cz/study/courses/IOS/public/projekty/projekt1/ios23-projekt1_files/output/chtml/fonts/woff-v2/MathJax_Main-Italic.woff") format("woff");
+}
+
+@font-face /* 5 */ {
+  font-family: MJXTEX-BI;
+  src: url("https://www.fit.vutbr.cz/study/courses/IOS/public/projekty/projekt1/ios23-projekt1_files/output/chtml/fonts/woff-v2/MathJax_Math-BoldItalic.woff") format("woff");
+}
+
+@font-face /* 6 */ {
+  font-family: MJXTEX-S1;
+  src: url("https://www.fit.vutbr.cz/study/courses/IOS/public/projekty/projekt1/ios23-projekt1_files/output/chtml/fonts/woff-v2/MathJax_Size1-Regular.woff") format("woff");
+}
+
+@font-face /* 7 */ {
+  font-family: MJXTEX-S2;
+  src: url("https://www.fit.vutbr.cz/study/courses/IOS/public/projekty/projekt1/ios23-projekt1_files/output/chtml/fonts/woff-v2/MathJax_Size2-Regular.woff") format("woff");
+}
+
+@font-face /* 8 */ {
+  font-family: MJXTEX-S3;
+  src: url("https://www.fit.vutbr.cz/study/courses/IOS/public/projekty/projekt1/ios23-projekt1_files/output/chtml/fonts/woff-v2/MathJax_Size3-Regular.woff") format("woff");
+}
+
+@font-face /* 9 */ {
+  font-family: MJXTEX-S4;
+  src: url("https://www.fit.vutbr.cz/study/courses/IOS/public/projekty/projekt1/ios23-projekt1_files/output/chtml/fonts/woff-v2/MathJax_Size4-Regular.woff") format("woff");
+}
+
+@font-face /* 10 */ {
+  font-family: MJXTEX-A;
+  src: url("https://www.fit.vutbr.cz/study/courses/IOS/public/projekty/projekt1/ios23-projekt1_files/output/chtml/fonts/woff-v2/MathJax_AMS-Regular.woff") format("woff");
+}
+
+@font-face /* 11 */ {
+  font-family: MJXTEX-C;
+  src: url("https://www.fit.vutbr.cz/study/courses/IOS/public/projekty/projekt1/ios23-projekt1_files/output/chtml/fonts/woff-v2/MathJax_Calligraphic-Regular.woff") format("woff");
+}
+
+@font-face /* 12 */ {
+  font-family: MJXTEX-CB;
+  src: url("https://www.fit.vutbr.cz/study/courses/IOS/public/projekty/projekt1/ios23-projekt1_files/output/chtml/fonts/woff-v2/MathJax_Calligraphic-Bold.woff") format("woff");
+}
+
+@font-face /* 13 */ {
+  font-family: MJXTEX-FR;
+  src: url("https://www.fit.vutbr.cz/study/courses/IOS/public/projekty/projekt1/ios23-projekt1_files/output/chtml/fonts/woff-v2/MathJax_Fraktur-Regular.woff") format("woff");
+}
+
+@font-face /* 14 */ {
+  font-family: MJXTEX-FRB;
+  src: url("https://www.fit.vutbr.cz/study/courses/IOS/public/projekty/projekt1/ios23-projekt1_files/output/chtml/fonts/woff-v2/MathJax_Fraktur-Bold.woff") format("woff");
+}
+
+@font-face /* 15 */ {
+  font-family: MJXTEX-SS;
+  src: url("https://www.fit.vutbr.cz/study/courses/IOS/public/projekty/projekt1/ios23-projekt1_files/output/chtml/fonts/woff-v2/MathJax_SansSerif-Regular.woff") format("woff");
+}
+
+@font-face /* 16 */ {
+  font-family: MJXTEX-SSB;
+  src: url("https://www.fit.vutbr.cz/study/courses/IOS/public/projekty/projekt1/ios23-projekt1_files/output/chtml/fonts/woff-v2/MathJax_SansSerif-Bold.woff") format("woff");
+}
+
+@font-face /* 17 */ {
+  font-family: MJXTEX-SSI;
+  src: url("https://www.fit.vutbr.cz/study/courses/IOS/public/projekty/projekt1/ios23-projekt1_files/output/chtml/fonts/woff-v2/MathJax_SansSerif-Italic.woff") format("woff");
+}
+
+@font-face /* 18 */ {
+  font-family: MJXTEX-SC;
+  src: url("https://www.fit.vutbr.cz/study/courses/IOS/public/projekty/projekt1/ios23-projekt1_files/output/chtml/fonts/woff-v2/MathJax_Script-Regular.woff") format("woff");
+}
+
+@font-face /* 19 */ {
+  font-family: MJXTEX-T;
+  src: url("https://www.fit.vutbr.cz/study/courses/IOS/public/projekty/projekt1/ios23-projekt1_files/output/chtml/fonts/woff-v2/MathJax_Typewriter-Regular.woff") format("woff");
+}
+
+@font-face /* 20 */ {
+  font-family: MJXTEX-V;
+  src: url("https://www.fit.vutbr.cz/study/courses/IOS/public/projekty/projekt1/ios23-projekt1_files/output/chtml/fonts/woff-v2/MathJax_Vector-Regular.woff") format("woff");
+}
+
+@font-face /* 21 */ {
+  font-family: MJXTEX-VB;
+  src: url("https://www.fit.vutbr.cz/study/courses/IOS/public/projekty/projekt1/ios23-projekt1_files/output/chtml/fonts/woff-v2/MathJax_Vector-Bold.woff") format("woff");
+}
+</style><style type="text/css">.CtxtMenu_InfoClose {  top:.2em; right:.2em;}
+.CtxtMenu_InfoContent {  overflow:auto; text-align:left; font-size:80%;  padding:.4em .6em; border:1px inset; margin:1em 0px;  max-height:20em; max-width:30em; background-color:#EEEEEE;  white-space:normal;}
+.CtxtMenu_Info.CtxtMenu_MousePost {outline:none;}
+.CtxtMenu_Info {  position:fixed; left:50%; width:auto; text-align:center;  border:3px outset; padding:1em 2em; background-color:#DDDDDD;  color:black;  cursor:default; font-family:message-box; font-size:120%;  font-style:normal; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 15px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius:15px;               /* Safari and Chrome */  -moz-border-radius:15px;                  /* Firefox */  -khtml-border-radius:15px;                /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */  filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color="gray", Positive="true"); /* IE */}
+</style><style type="text/css">.CtxtMenu_MenuClose {  position:absolute;  cursor:pointer;  display:inline-block;  border:2px solid #AAA;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  font-family: "Courier New", Courier;  font-size:24px;  color:#F0F0F0}
+.CtxtMenu_MenuClose span {  display:block; background-color:#AAA; border:1.5px solid;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  line-height:0;  padding:8px 0 6px     /* may need to be browser-specific */}
+.CtxtMenu_MenuClose:hover {  color:white!important;  border:2px solid #CCC!important}
+.CtxtMenu_MenuClose:hover span {  background-color:#CCC!important}
+.CtxtMenu_MenuClose:hover:focus {  outline:none}
+</style><style type="text/css">.CtxtMenu_Menu {  position:absolute;  background-color:white;  color:black;  width:auto; padding:5px 0px;  border:1px solid #CCCCCC; margin:0; cursor:default;  font: menu; text-align:left; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 5px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius: 5px;             /* Safari and Chrome */  -moz-border-radius: 5px;                /* Firefox */  -khtml-border-radius: 5px;              /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */}
+.CtxtMenu_MenuItem {  padding: 1px 2em;  background:transparent;}
+.CtxtMenu_MenuArrow {  position:absolute; right:.5em; padding-top:.25em; color:#666666;  font-family: null; font-size: .75em}
+.CtxtMenu_MenuActive .CtxtMenu_MenuArrow {color:white}
+.CtxtMenu_MenuArrow.CtxtMenu_RTL {left:.5em; right:auto}
+.CtxtMenu_MenuCheck {  position:absolute; left:.7em;  font-family: null}
+.CtxtMenu_MenuCheck.CtxtMenu_RTL { right:.7em; left:auto }
+.CtxtMenu_MenuRadioCheck {  position:absolute; left: .7em;}
+.CtxtMenu_MenuRadioCheck.CtxtMenu_RTL {  right: .7em; left:auto}
+.CtxtMenu_MenuInputBox {  padding-left: 1em; right:.5em; color:#666666;  font-family: null;}
+.CtxtMenu_MenuInputBox.CtxtMenu_RTL {  left: .1em;}
+.CtxtMenu_MenuComboBox {  left:.1em; padding-bottom:.5em;}
+.CtxtMenu_MenuSlider {  left: .1em;}
+.CtxtMenu_SliderValue {  position:absolute; right:.1em; padding-top:.25em; color:#333333;  font-size: .75em}
+.CtxtMenu_SliderBar {  outline: none; background: #d3d3d3}
+.CtxtMenu_MenuLabel {  padding: 1px 2em 3px 1.33em;  font-style:italic}
+.CtxtMenu_MenuRule {  border-top: 1px solid #DDDDDD;  margin: 4px 3px;}
+.CtxtMenu_MenuDisabled {  color:GrayText}
+.CtxtMenu_MenuActive {  background-color: #606872;  color: white;}
+.CtxtMenu_MenuDisabled:focus {  background-color: #E8E8E8}
+.CtxtMenu_MenuLabel:focus {  background-color: #E8E8E8}
+.CtxtMenu_ContextMenu:focus {  outline:none}
+.CtxtMenu_ContextMenu .CtxtMenu_MenuItem:focus {  outline:none}
+.CtxtMenu_SelectionMenu {  position:relative; float:left;  border-bottom: none; -webkit-box-shadow:none; -webkit-border-radius:0px; }
+.CtxtMenu_SelectionItem {  padding-right: 1em;}
+.CtxtMenu_Selection {  right: 40%; width:50%; }
+.CtxtMenu_SelectionBox {  padding: 0em; max-height:20em; max-width: none;  background-color:#FFFFFF;}
+.CtxtMenu_SelectionDivider {  clear: both; border-top: 2px solid #000000;}
+.CtxtMenu_Menu .CtxtMenu_MenuClose {  top:-10px; left:-10px}
+</style></head>
+   <body>
+            <div class="container">
+         <h1 class="title">1. Úloha IOS (2023)</h1>
+                  <div class="row">
+            <div class="col-xl-10"><h1 id="popis-úlohy">Popis úlohy</h1>
+<p>Česká kontrarozvědka FDTO (<strong>F</strong>akt
+<strong>D</strong>ěsně <strong>T</strong>ajná
+<strong>O</strong>rganizace) má podezření, že v jejích řadách působí
+krtek a služba tak byla kompromitována. Obsah některých přísně tajných
+digitálních dokumentů byl nejenže vyzrazen tajným službám cizích
+mocností, ale zřejmě i modifikován, což způsobilo chaos v organizaci
+některých tajných operací a částečně tak paralyzovalo fungování celé
+kontrarozvědky. V zájmu národní bezpečnosti je zapotřebí krtka urychleně
+najít a polapit. Hledání však musí být maximálně diskrétní, aby krtek
+netušil, že se okolo něj utahuje smyčka.</p>
+<p>Protože zavedení nových oficiálních bezpečnostních opatření při práci
+s utajovanými digitálními dokumenty by mohlo být podezřelé a krtka
+vyplašit, rozhodlo se vedení kontrarozvědky, že bude potřeba tato
+bezpečností opatření zavést utajeně. Tedy tak, aby si nikdo (kromě
+nejužšího vedení a Vás) nebyl vědom toho, že nějaká nová opatření vešla
+v platnost.</p>
+<p>Vzhledem k Vaší léty prověřené loajalitě a bezchybné pracovní
+historii v IT jednotce kontrarozvědky jste byli pro tuto tajnou misi
+vybráni právě Vy. Vaším úkolem je vytvořit skript, který bude
+prezentován jako nový interní nástroj pro zvýšení efektivity při práci s
+elektronickými dokumenty, zatímco skrytě bude použit pro tajné
+zaznamenávání (tzv. logging) a ohlašování informací o tom, se kterými
+dokumenty (a kdy) daný uživatel pracoval.</p>
+<p>Citlivé dokumenty jsou v kontrarozvědce zásadně uchovávány na
+serverech a přístup k nim probíhá vzdáleně pomocí příslušných nástrojů.
+Skript <code>mole</code> (<strong>M</strong>akes <strong>O</strong>ne’s
+<strong>L</strong>ife <strong>E</strong>asier) tedy bude fungovat jako
+tzv. wrapper nad textovými editory, což znamená, že textový editor bude
+spouštěn skrze skript <code>mole</code>. Skript si bude pamatovat, které
+soubory byly v jakém adresáři prostřednictvím skriptu <code>mole</code>
+editovány. Jednotlivé soubory je zároveň možné přiřazovat do skupin pro
+jednodušší filtrování při práci s velkým množstvím souborů. Pokud bude
+skript spuštěn bez parametrů, vybere skript soubor, který má být
+editován.</p>
+<h1 id="specifikace-chování-skriptu">Specifikace chování skriptu</h1>
+<p><strong>JMÉNO</strong></p>
+<ul>
+<li><code>mole</code> – wrapper pro efektivní použití textového editoru
+s možností automatického výběru nejčastěji či posledně modifikovaného
+souboru.</li>
+</ul>
+<p><strong>POUŽITÍ</strong></p>
+<ul>
+<li><code>mole -h</code></li>
+<li><code>mole [-g GROUP] FILE</code></li>
+<li><code>mole [-m] [FILTERS] [DIRECTORY]</code></li>
+<li><code>mole list [FILTERS] [DIRECTORY]</code></li>
+<li><code>mole secret-log [-b DATE] [-a DATE] [DIRECTORY1 [DIRECTORY2 [...]]]</code></li>
+</ul>
+<h1 id="popis">Popis</h1>
+<ul>
+<li><code>-h</code> – Vypíše nápovědu k použití skriptu (volba
+<code>secret-log</code> by neměla být v nápovědě uvedena; nechceme krtka
+upozornit, že sbíráme informace).</li>
+<li><code>mole [-g GROUP] FILE</code> – Zadaný soubor bude otevřen.
+<ul>
+<li>Pokud byl zadán přepínač <code>-g</code>, dané otevření souboru bude
+zároveň přiřazeno do skupiny s názvem <code>GROUP</code>.
+<code>GROUP</code> může být název jak existující, tak nové skupiny.</li>
+</ul></li>
+<li><code>mole [-m] [FILTERS] [DIRECTORY]</code> – Pokud
+<code>DIRECTORY</code> odpovídá existujícímu adresáři, skript z daného
+adresáře vybere soubor, který má být otevřen.
+<ul>
+<li>Pokud nebyl zadán adresář, předpokládá se aktuální adresář.</li>
+<li>Pokud bylo v daném adresáři editováno skriptem více souborů, vybere
+se soubor, který byl pomocí skriptu otevřen (editován) jako
+<strong>poslední</strong>.</li>
+<li>Pokud byl zadán argument <code>-m</code>, tak skript vybere soubor,
+který byl pomocí skriptu otevřen (editován) <strong>nejčastěji</strong>.
+<ul>
+<li>Pokud bude při použití přepínače <code>-m</code> nalezeno více
+souborů se stejným maximálním počtem otevření, může <code>mole</code>
+vybrat kterýkoliv z nich.</li>
+</ul></li>
+<li>Výběr souboru může být dále ovlivněn zadanými filtry
+<code>FILTERS</code>.</li>
+<li>Pokud nebyl v daném adresáři otevřen (editován) ještě žádný soubor,
+případně žádný soubor nevyhovuje zadaným filtrům, jedná se o chybu.</li>
+</ul></li>
+<li><code>mole list [FILTERS] [DIRECTORY]</code> – Skript zobrazí seznam
+souborů, které byly v daném adresáři otevřeny (editovány) pomocí
+skriptu.
+<ul>
+<li>Pokud nebyl zadán adresář, předpokládá se aktuální adresář.</li>
+<li>Seznam souborů může být filtrován pomocí <code>FILTERS</code>.</li>
+<li>Seznam souborů bude lexikograficky seřazen a každý soubor bude
+uveden na samostatném řádku.</li>
+<li>Každý řádek bude mít formát
+<code>FILENAME:&lt;INDENT&gt;GROUP_1,GROUP_2,...</code>, kde
+<code>FILENAME</code> je jméno souboru (i s jeho případnými příponami),
+<code>&lt;INDENT&gt;</code> je počet mezer potřebných k zarovnání a
+<code>GROUP_*</code> jsou názvy skupin, u kterých je soubor evidován.
+<ul>
+<li>Seznam skupin bude lexikograficky seřazen.</li>
+<li>Pokud budou skupiny upřesněny pomocí přepínače <code>-g</code> (viz
+sekce FILTRY), uvažujte při výpisu souborů a skupin pouze záznamy
+patřící do těchto skupin.</li>
+<li>Pokud soubor nepatří do žádné skupiny, bude namísto seznamu skupin
+vypsán pouze znak <code>-</code>.</li>
+<li>Minimální počet mezer použitých k zarovnání (<code>INDENT</code>) je
+jedna. Každý řádek bude zarovnán tak, aby seznam skupin začínal na
+stejné pozici. Tedy např:</li>
+</ul>
+<pre><code>FILE1:  grp1,grp2
+FILE10: grp1,grp3
+FILE:   -</code></pre></li>
+</ul></li>
+<li><code>mole secret-log [-b DATE] [-a DATE] [DIRECTORY1 [DIRECTORY2 [...]]]</code>
+– Skript za účelem dopadení krtka vytvoří tajný komprimovaný log s
+informacemi o souborech otevřených (editovaných) skrze skript
+<code>mole</code>.
+<ul>
+<li>Pokud byly zadány adresáře, tajný log bude obsahovat záznamy o
+otevřených (editovaných) souborech pouze z těchto adresářů. Neexistující
+adresáře nebo adresáře bez záznamů budou ignorovány.</li>
+<li>Pokud nebyl zadán žádný adresář, tajný log bude obsahovat záznamy ze
+všech evidovaných adresářů.</li>
+<li>Otevřené (editované) soubory, které mají být v tajném logu
+zaznamenány, je možné dále omezit pomocí filtrů <code>-a</code> a
+<code>-b</code> (viz níže).</li>
+</ul></li>
+</ul>
+<h1 id="filtry">Filtry</h1>
+<p><code>FILTERS</code> může být kombinace následujících filtrů (každý
+může být uveden maximálně jednou):</p>
+<ul>
+<li><code>[-g GROUP1[,GROUP2[,...]]]</code> – Specifikace skupin. Soubor
+bude uvažován (pro potřeby otevření nebo výpisu) pouze tehdy, pokud jeho
+spuštění spadá alespoň do jedné z těchto skupin.</li>
+<li><code>[-a DATE]</code> - Záznamy o otevřených (editovaných)
+souborech před tímto datem <strong>včetně (volitelně lze implementovat i
+jako striktně před uvedeným datem; UPDATED 22.3.)</strong> nebudou
+uvažovány.</li>
+<li><code>[-b DATE]</code> - Záznamy o otevřených (editovaných)
+souborech po tomto datu <strong>včetně (volitelně lze implementovat i
+jako striktně po uvedeném datu; UPDATED 22.3.)</strong> nebudou
+uvažovány.</li>
+<li>Argument <code>DATE</code> je ve formátu
+<code>YYYY-MM-DD</code>.</li>
+</ul>
+<h1 id="nastavení-a-konfigurace">Nastavení a konfigurace</h1>
+<ul>
+<li>Skript si pamatuje informace o svém spouštění v souboru, který je
+dán proměnnou <code>MOLE_RC</code>. Formát souboru není specifikován.
+<ul>
+<li>Pokud není proměnná nastavena, jedná se o chybu.</li>
+<li>Pokud soubor na cestě dané proměnnou <code>MOLE_RC</code>
+neexistuje, soubor bude vytvořen včetně cesty k danému souboru (pokud i
+ta neexistuje).</li>
+</ul></li>
+<li>Skript spouští editor, který je nastaven v proměnné
+<code>EDITOR</code>. Pokud není proměnná <code>EDITOR</code> nastavená,
+respektuje proměnnou <code>VISUAL</code>. Pokud ani ta není nastavená,
+použije se příkaz <code>vi</code>.</li>
+</ul>
+<h1 id="formát-tajného-logu">Formát tajného logu</h1>
+<ul>
+<li>Tajný log vygenerovaný pomocí příkazu <code>secret-log</code> bude
+uložen v adresáři <code>.mole</code> umístěném v domovském adresáři
+(tedy např. <code>/home/$USER/.mole/</code>). Název souboru bude ve
+formátu <code>log_USER_DATETIME.bz2</code>, kde <code>USER</code>
+odpovídá jménu aktuálního uživatele a <code>DATETIME</code> odpovídá
+datu a času vytvoření tajného logu.
+<ul>
+<li>Tajný log bude obsahovat záznamy o všech známých manipulacích (tedy
+otevření skrze skript <code>mole</code>) s vybranými soubory, případně
+dále omezených na daný časový úsek pomocí přepínačů <code>-a</code>,
+<code>-b</code>, nebo jejich kombinací.</li>
+<li>Formát záznamů v logu bude
+<code>FILEPATH;DATETIME_1;DATETIME_2;...</code>, kde
+<ul>
+<li><code>FILEPATH</code> je reálná cesta k souboru,</li>
+<li><code>DATETIME_N</code> je datum a čas chronologicky
+<code>N</code>-tého známého otevření souboru buď napříč celou známou
+historií, nebo v daném časovém úseku.</li>
+</ul></li>
+<li>Záznamy v tajném logu budou seřazeny lexikograficky podle hodnoty
+<code>FILEPATH</code>.</li>
+</ul></li>
+<li>Formát hodnot <code>DATETIME</code> a <code>DATETIME_N</code> je
+<code>YYYY-MM-DD_HH-mm-ss</code>.</li>
+<li>Tajný log komprimujte pomocí utility <code>bzip2</code>.</li>
+</ul>
+<h1 id="poznámky">Poznámky</h1>
+<ul>
+<li>Můžete předpokládat, že nebude zadána skupina se jménem
+<code>-</code> a že názvy skupin nebudou obsahovat znak čárky</li>
+<li>Můžete předpokládat, že názvy souborů (ani jejich cesty) nebudou
+obsahovat znaky středníku nebo dvojtečky.</li>
+<li>Skript nebere v potaz otevření nebo editace, které byly provedeny
+mimo skript <code>mole</code>.</li>
+<li>Stejně tak pro příkaz <code>mole [-m] [FILTERS] [DIRECTORY]</code>
+skript nebere v potaz soubory, se kterými dříve počítal a které jsou
+nyní smazané (u ostatních příkazů není potřeba kontrolovat existenci
+souboru). Například, pokud byl <em>posledně</em> editovaný soubor
+smazán, volání <code>mole</code> otevře <em>předposledně</em> editovaný
+soubor, pokud byl i ten smazán, bude otevřen <em>předpředposledně</em>
+editovaný soubor, atp. <strong>UPDATED 6.3.</strong></li>
+<li>Při rozhodování relativní cesty adresáře je doporučené používat
+reálnou cestu (realpath). Důvod např.:</li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mole .</span>
+<span id="cb2-2"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mole <span class="kw">`</span><span class="bu">pwd</span><span class="kw">`</span></span></code></pre></div>
+<h1 id="návratová-hodnota">Návratová hodnota</h1>
+<ul>
+<li>Skript vrací úspěch v případě úspěšné operace nebo v případě úspěšné
+editace. Pokud editor vrátí chybu, skript vrátí stejný chybový návratový
+kód. Interní chyba skriptu bude doprovázena chybovým hlášením.</li>
+</ul>
+<h1 id="implementační-detaily">Implementační detaily</h1>
+<ul>
+<li>Skript by měl mít v celém běhu nastaveno
+<code>POSIXLY_CORRECT=yes</code>.</li>
+<li>Skript by měl běžet na všech běžných shellech (dash, ksh, bash).
+Můžete použít GNU rozšíření pro <code>sed</code> či <code>awk</code>.
+Jazyk Perl nebo Python povolen není.</li>
+<li>Skript by měl ošetřit i chybový případ, že na daném stroji utilita
+<code>realpath</code> není dostupná (např. ukončením programu s chybovým
+kódem).</li>
+<li><strong>UPOZORNĚNÍ:</strong> některé servery, např.
+<code>merlin.fit.vutbr.cz</code>, mají symlink
+<code>/bin/sh -&gt; bash</code>. Ověřte si proto, že skript skutečně
+testujete daným shellem. Doporučujeme ověřit správnou funkčnost pomocí
+virtuálního stroje níže.</li>
+<li>Skript musí běžet na běžně dostupných OS GNU/Linux, BSD a MacOS.
+Studentům je k dispozici virtuální stroj, na kterém lze ověřit správnou
+funkčnost projektu, s obrazem ke stažení zde: <a href="http://www.fit.vutbr.cz/~lengal/public/trusty.ova">http://www.fit.vutbr.cz/~lengal/public/trusty.ova</a>
+(pro VirtualBox, login: <code>trusty</code> / heslo:
+<code>trusty</code>).</li>
+<li>Skript nesmí používat dočasné soubory. Povoleny jsou však dočasné
+soubory nepřímo tvořené jinými příkazy (např. příkazem
+<code>sed -i</code>). Soubor <code>MOLE_RC</code> ani tajné log soubory
+nejsou v tomto případě chápány jako dočasné soubory.</li>
+<li>Není potřeba řešit možnost souběhu několika instancí skriptu, v
+takovém případě je chování nedefinované.</li>
+</ul>
+<h1 id="možná-rozšíření">Možná rozšíření</h1>
+<ul>
+<li>Implementuje u příkazů <code>mole [-m] [FILTERS] [DIRECTORY]</code>,
+<code>list</code> a <code>secret-log</code> nový přepínač
+<code>-r</code> (recursive), který způsobí, že <code>mole</code> bude
+hledat vyhovující záznamy o otevření (editaci) souborů i mezi záznamy,
+které se vztahují ke vnořeným adresářům vzhledem k
+<code>DIRECTORY</code> (resp. aktuálnímu adresáři, pokud nebyl
+<code>DIRECTORY</code> zadán).
+<ul>
+<li>Tedy například příkaz <code>mole list ~/proj1</code> by na výstup
+vypsal jak soubor <code>main.c</code>, tak soubor
+<code>.git/config</code> za předpokladu, že má v logu
+<code>MOLE_RC</code> uloženy záznamy o otevření souborů
+<code>~/proj1/main.c</code> a <code>~/proj1/.git/config</code>.</li>
+</ul></li>
+<li>Implementujte u příkazů <code>mole [-m] [FILTERS] [DIRECTORY]</code>
+a <code>list</code> nový přepínač <code>-d</code> (default), který
+způsobí, že <code>mole</code> bude pracovat pouze se záznamy spuštění
+(editace) souborů bez specifikované skupiny.
+<ul>
+<li>Tedy např. při použití příkazu <code>mole -d ~</code> bude ignorován
+záznam o spuštění <code>mole -g bash ~/.bashrc</code>.</li>
+<li>Přepínač <code>-d</code> bude výlučný s přepínačem <code>-g</code>,
+tedy v rámci jednoho spuštění <code>mole</code> nemohou být zadány oba
+přepínače zároveň.</li>
+</ul></li>
+<li>Implementace přepínačů <code>-d</code> a <code>-r</code> je
+nepovinná; korektní implementace může vynahradit jiné bodové
+ztráty.</li>
+</ul>
+<h1 id="odevzdávání">Odevzdávání</h1>
+<p>Odevzdávejte pouze skript <code>mole</code> (nebalte ho do žádného
+archivu) do IS VUT.</p>
+<h1 id="rady">Rady</h1>
+<ul>
+<li>Dobrá dekompozice problému na podproblémy Vám může značně ulehčit
+práci a předejít chybám.</li>
+<li>Naučte se <em>dobře</em> používat <strong>funkce</strong> v
+shellu.</li>
+<li>Následující utility Vám mohou při řešení projektu velmi pomoci:
+<ul>
+<li><a href="https://pubs.opengroup.org/onlinepubs/9699919799/utilities/getopts.html">getopts</a></li>
+<li><a href="https://pubs.opengroup.org/onlinepubs/9699919799/utilities/date.html">date</a></li>
+<li><a href="https://pubs.opengroup.org/onlinepubs/9699919799/utilities/cut.html">cut</a></li>
+<li><a href="https://pubs.opengroup.org/onlinepubs/9699919799/utilities/sed.html">sed</a></li>
+<li><a href="https://pubs.opengroup.org/onlinepubs/9699919799/utilities/wc.html">wc</a></li>
+<li><a href="https://pubs.opengroup.org/onlinepubs/9699919799/utilities/printf.html">printf</a></li>
+<li><a href="https://pubs.opengroup.org/onlinepubs/9699919799/utilities/awk.html">awk</a></li>
+</ul></li>
+</ul>
+<h1 id="příklady-použití">Příklady použití</h1>
+<p>Následující příklady předpokládají, že skript <code>mole</code> je
+dostupný v jedné z cest v proměnné <code>PATH</code>.</p>
+<p>Předpokládejte, že ukázky chování v bodech 2 až 6 jsou na sobě
+nezávislé a každá z nich navazuje přímo na ukázku č. 1. Tedy například
+důsledky ukázky č. 2 se nepromítnou do výsledků ukázek č. 3, 4, atd.
+(<strong>UPDATED 21.3.</strong>)</p>
+<ol type="1">
+<li>Editace různých souborů:</li>
+</ol>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> export MOLE_RC=<span class="va">$HOME</span>/.config/molerc</span>
+<span id="cb3-2"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> date</span>
+<span id="cb3-3"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="ex">Thu</span> Feb 16 01:37:14 PM CET 2023</span>
+<span id="cb3-4"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mole ~/.ssh/config</span>
+<span id="cb3-5"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mole <span class="at">-g</span> bash ~/.bashrc</span>
+<span id="cb3-6"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mole ~/.local/bin/mole</span>
+<span id="cb3-7"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mole <span class="at">-g</span> bash ~/.bashrc                         <span class="co"># (D)</span></span>
+<span id="cb3-8"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mole ~/.indent.pro</span>
+<span id="cb3-9"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mole ~/.viminfo</span>
+<span id="cb3-10"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> date</span>
+<span id="cb3-12"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="ex">Mon</span> Feb 20 07:21:09 PM CET 2023</span>
+<span id="cb3-13"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mole <span class="at">-g</span> bash ~/.bash_history</span>
+<span id="cb3-14"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mole <span class="at">-g</span> git ~/.gitconfig</span>
+<span id="cb3-15"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mole <span class="at">-g</span> bash ~/.bash_profile                   <span class="co"># (C)</span></span>
+<span id="cb3-16"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mole <span class="at">-g</span> git ~/proj1/.git/info/exclude</span>
+<span id="cb3-17"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mole ~/.ssh/known_hosts                        <span class="co"># (A)</span></span>
+<span id="cb3-18"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mole <span class="at">-g</span> git ~/proj1/.git/config</span>
+<span id="cb3-19"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mole <span class="at">-g</span> git ~/proj1/.git/COMMIT_EDITMSG</span>
+<span id="cb3-20"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mole ~/proj1/.git/COMMIT_EDITMSG</span>
+<span id="cb3-21"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mole <span class="at">-g</span> git ~/proj1/.git/config                <span class="co"># (F)</span></span>
+<span id="cb3-22"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mole <span class="at">-g</span> project ~/proj1/main.c</span>
+<span id="cb3-23"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mole <span class="at">-g</span> project ~/proj1/struct.c</span>
+<span id="cb3-24"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mole <span class="at">-g</span> project ~/proj1/struct.h</span>
+<span id="cb3-25"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mole <span class="at">-g</span> project_readme ~/proj1/README.md</span>
+<span id="cb3-26"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb3-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-27"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb3-27" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> date</span>
+<span id="cb3-28"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb3-28" aria-hidden="true" tabindex="-1"></a><span class="ex">Fri</span> Feb 24 03:52:34 PM CET 2023</span>
+<span id="cb3-29"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb3-29" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mole <span class="at">-g</span> git2 ~/.gitconfig</span>
+<span id="cb3-30"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb3-30" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mole ~/proj1/main.c</span>
+<span id="cb3-31"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb3-31" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mole ~/.bashrc                                 <span class="co"># (E)</span></span>
+<span id="cb3-32"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb3-32" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mole ~/.indent.pro</span>
+<span id="cb3-33"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb3-33" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mole ~/.vimrc                                  <span class="co"># (B)</span></span></code></pre></div>
+<ol start="2" type="1">
+<li>Opětovná editace:</li>
+</ol>
+<div class="sourceCode" id="cb4"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd ~/.ssh</span>
+<span id="cb4-2"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mole</span>
+<span id="cb4-3"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="ex">...</span> <span class="co"># spustí se editace souboru ~/.ssh/known_hosts (odpovídá řádku A)</span></span>
+<span id="cb4-4"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mole ~</span>
+<span id="cb4-5"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="ex">...</span> <span class="co"># spustí se editace souboru ~/.vimrc (odpovídá řádku B)</span></span>
+<span id="cb4-6"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mole <span class="at">-g</span> bash ~</span>
+<span id="cb4-7"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="ex">...</span> <span class="co"># spustí se editace souboru ~/.bash_profile (odpovídá řádku C)</span></span>
+<span id="cb4-8"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mole <span class="at">-g</span> bash <span class="at">-b</span> 2023-02-20 ~</span>
+<span id="cb4-9"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="ex">...</span> <span class="co"># spustí se editace souboru ~/.bashrc (odpovídá řádku D)</span></span>
+<span id="cb4-10"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd</span>
+<span id="cb4-11"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mole <span class="at">-m</span></span>
+<span id="cb4-12"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="ex">...</span> <span class="co"># spustí se editace souboru ~/.bashrc (odpovídá řádku E)</span></span>
+<span id="cb4-13"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mole <span class="at">-m</span> <span class="at">-g</span> git ~/proj1/.git</span>
+<span id="cb4-14"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="ex">...</span> <span class="co"># spustí se editace souboru ~/proj1/.git/config (odpovídá řádku F; ve skupině git byl daný soubor editován jako jediný dvakrát, zbytek souborů jednou)</span></span>
+<span id="cb4-15"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mole <span class="at">-m</span> <span class="at">-g</span> tst</span>
+<span id="cb4-16"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="ex">...</span> <span class="co"># ! chyba, nebyl nalezen žádný soubor k otevření</span></span>
+<span id="cb4-17"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mole <span class="at">-a</span> 2023-02-16 <span class="at">-b</span> 2023-02-20</span>
+<span id="cb4-18"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="ex">...</span> <span class="co"># ! chyba, nebyl nalezen žádný soubor k otevření</span></span></code></pre></div>
+<ol start="3" type="1">
+<li>Zobrazení seznamu editovaných souborů (<strong>OPRAVENO
+11.3.</strong>):</li>
+</ol>
+<div class="sourceCode" id="cb5"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb5-1"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mole list <span class="va">$HOME</span></span>
+<span id="cb5-2"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">.bash_history:</span> bash</span>
+<span id="cb5-3"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="ex">.bash_profile:</span> bash</span>
+<span id="cb5-4"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="ex">.bashrc:</span>       bash</span>
+<span id="cb5-5"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="ex">.gitconfig:</span>    git,git2</span>
+<span id="cb5-6"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="ex">.indent.pro:</span>   <span class="at">-</span></span>
+<span id="cb5-7"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="ex">.viminfo:</span>      <span class="at">-</span></span>
+<span id="cb5-8"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="ex">.vimrc:</span>        <span class="at">-</span></span>
+<span id="cb5-9"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mole list <span class="at">-g</span> bash <span class="va">$HOME</span></span>
+<span id="cb5-10"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="ex">.bash_history:</span> bash</span>
+<span id="cb5-11"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="ex">.bash_profile:</span> bash</span>
+<span id="cb5-12"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="ex">.bashrc:</span>       bash</span>
+<span id="cb5-13"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mole list <span class="at">-g</span> project,project_readme ~/proj1</span>
+<span id="cb5-14"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="ex">main.c:</span>    project</span>
+<span id="cb5-15"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="ex">README.md:</span> project_readme</span>
+<span id="cb5-16"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="ex">struct.c:</span>  project</span>
+<span id="cb5-17"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="ex">struct.h:</span>  project</span>
+<span id="cb5-18"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mole list <span class="at">-b</span> 2023-02-20 <span class="va">$HOME</span></span>
+<span id="cb5-19"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb5-19" aria-hidden="true" tabindex="-1"></a><span class="ex">.bashrc:</span>     bash</span>
+<span id="cb5-20"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb5-20" aria-hidden="true" tabindex="-1"></a><span class="ex">.indent.pro:</span> <span class="at">-</span></span>
+<span id="cb5-21"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb5-21" aria-hidden="true" tabindex="-1"></a><span class="ex">.viminfo:</span>    <span class="at">-</span></span>
+<span id="cb5-22"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb5-22" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mole list <span class="at">-a</span> 2023-02-23 <span class="va">$HOME</span></span>
+<span id="cb5-23"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb5-23" aria-hidden="true" tabindex="-1"></a><span class="ex">.bashrc:</span>     <span class="at">-</span></span>
+<span id="cb5-24"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb5-24" aria-hidden="true" tabindex="-1"></a><span class="ex">.gitconfig:</span>  git2</span>
+<span id="cb5-25"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb5-25" aria-hidden="true" tabindex="-1"></a><span class="ex">.indent.pro:</span> <span class="at">-</span></span>
+<span id="cb5-26"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb5-26" aria-hidden="true" tabindex="-1"></a><span class="ex">.vimrc:</span>      <span class="at">-</span></span>
+<span id="cb5-27"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb5-27" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mole list <span class="at">-a</span> 2023-02-16 <span class="at">-b</span> 2023-02-24 <span class="at">-g</span> bash <span class="va">$HOME</span></span>
+<span id="cb5-28"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb5-28" aria-hidden="true" tabindex="-1"></a><span class="ex">.bash_history:</span> bash</span>
+<span id="cb5-29"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb5-29" aria-hidden="true" tabindex="-1"></a><span class="ex">.bash_profile:</span> bash</span>
+<span id="cb5-30"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb5-30" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mole list <span class="at">-a</span> 2023-02-20 <span class="at">-b</span> 2023-02-24 <span class="va">$HOME</span></span>
+<span id="cb5-31"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb5-31" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mole list <span class="at">-g</span> grp1,grp2 <span class="va">$HOME</span></span></code></pre></div>
+<ol start="4" type="1">
+<li>Vytvoření tajného logu:</li>
+</ol>
+<div class="sourceCode" id="cb6"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb6-1"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> date</span>
+<span id="cb6-2"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Fri</span> Feb 24 04:13:58 PM CET 2023</span>
+<span id="cb6-3"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mole secret-log</span>
+<span id="cb6-4"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> bunzip2 <span class="at">-k</span> <span class="at">--stdout</span> /home/trusty/.mole/log_trusty_2023-02-24_16-14-01.bz2</span>
+<span id="cb6-5"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="ex">/home/trusty/.bash_history</span><span class="kw">;</span><span class="ex">2023-02-20_19-21-13</span></span>
+<span id="cb6-6"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="ex">/home/trusty/.bash_profile</span><span class="kw">;</span><span class="ex">2023-02-20_19-21-38</span></span>
+<span id="cb6-7"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="ex">/home/trusty/.bashrc</span><span class="kw">;</span><span class="ex">2023-02-16_13-37-31</span><span class="kw">;</span><span class="ex">2023-02-16_13-38-02</span><span class="kw">;</span><span class="ex">2023-02-24_15-53-05</span></span>
+<span id="cb6-8"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="ex">/home/trusty/.gitconfig</span><span class="kw">;</span><span class="ex">2023-02-20_19-21-22</span><span class="kw">;</span><span class="ex">2023-02-24_15-52-39</span></span>
+<span id="cb6-9"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="ex">/home/trusty/.indent.pro</span><span class="kw">;</span><span class="ex">2023-02-16_13-38-34</span><span class="kw">;</span><span class="ex">2023-02-24_15-53-18</span></span>
+<span id="cb6-10"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="ex">/home/trusty/.local/bin/mole</span><span class="kw">;</span><span class="ex">2023-02-16_13-37-46</span></span>
+<span id="cb6-11"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="ex">/home/trusty/proj1/.git/COMMIT_EDITMSG</span><span class="kw">;</span><span class="ex">2023-02-20_19-25-12</span><span class="kw">;</span><span class="ex">2023-02-20_19-25-18</span></span>
+<span id="cb6-12"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="ex">/home/trusty/proj1/.git/config</span><span class="kw">;</span><span class="ex">2023-02-20_19-24-59</span><span class="kw">;</span><span class="ex">2023-02-20_19-25-27</span></span>
+<span id="cb6-13"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="ex">/home/trusty/proj1/.git/info/exclude</span><span class="kw">;</span><span class="ex">2023-02-20_19-22-04</span></span>
+<span id="cb6-14"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb6-14" aria-hidden="true" tabindex="-1"></a><span class="ex">/home/trusty/proj1/main.c</span><span class="kw">;</span><span class="ex">2023-02-20_19-25-51</span><span class="kw">;</span><span class="ex">2023-02-24_15-52-48</span></span>
+<span id="cb6-15"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="ex">/home/trusty/proj1/README.md</span><span class="kw">;</span><span class="ex">2023-02-20_19-26-36</span></span>
+<span id="cb6-16"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="ex">/home/trusty/proj1/struct.c</span><span class="kw">;</span><span class="ex">2023-02-20_19-26-03</span></span>
+<span id="cb6-17"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="ex">/home/trusty/proj1/struct.h</span><span class="kw">;</span><span class="ex">2023-02-20_19-26-18</span></span>
+<span id="cb6-18"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb6-18" aria-hidden="true" tabindex="-1"></a><span class="ex">/home/trusty/.ssh/config</span><span class="kw">;</span><span class="ex">2023-02-16_13-37-19</span></span>
+<span id="cb6-19"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb6-19" aria-hidden="true" tabindex="-1"></a><span class="ex">/home/trusty/.ssh/known_hosts</span><span class="kw">;</span><span class="ex">2023-02-20_19-22-48</span></span>
+<span id="cb6-20"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb6-20" aria-hidden="true" tabindex="-1"></a><span class="ex">/home/trusty/.viminfo</span><span class="kw">;</span><span class="ex">2023-02-16_13-38-53</span></span>
+<span id="cb6-21"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb6-21" aria-hidden="true" tabindex="-1"></a><span class="ex">/home/trusty/.vimrc</span><span class="kw">;</span><span class="ex">2023-02-24_15-54-04</span></span>
+<span id="cb6-22"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb6-22" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> date</span>
+<span id="cb6-23"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb6-23" aria-hidden="true" tabindex="-1"></a><span class="ex">Fri</span> Feb 24 04:15:13 PM CET 2023</span>
+<span id="cb6-24"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb6-24" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mole secret-log <span class="at">-b</span> 2023-02-22 ~/proj1 ~/.ssh</span>
+<span id="cb6-25"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb6-25" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> bunzip2 <span class="at">-k</span> <span class="at">--stdout</span> /home/trusty/.mole/log_trusty_2023-02-24_16-15-22.bz2</span>
+<span id="cb6-26"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb6-26" aria-hidden="true" tabindex="-1"></a><span class="ex">/home/trusty/proj1/main.c</span><span class="kw">;</span><span class="ex">2023-02-20_19-25-51</span></span>
+<span id="cb6-27"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb6-27" aria-hidden="true" tabindex="-1"></a><span class="ex">/home/trusty/proj1/README.md</span><span class="kw">;</span><span class="ex">2023-02-20_19-26-36</span></span>
+<span id="cb6-28"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb6-28" aria-hidden="true" tabindex="-1"></a><span class="ex">/home/trusty/proj1/struct.c</span><span class="kw">;</span><span class="ex">2023-02-20_19-26-03</span></span>
+<span id="cb6-29"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb6-29" aria-hidden="true" tabindex="-1"></a><span class="ex">/home/trusty/proj1/struct.h</span><span class="kw">;</span><span class="ex">2023-02-20_19-26-18</span></span>
+<span id="cb6-30"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb6-30" aria-hidden="true" tabindex="-1"></a><span class="ex">/home/trusty/.ssh/config</span><span class="kw">;</span><span class="ex">2023-02-16_13-37-19</span></span>
+<span id="cb6-31"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb6-31" aria-hidden="true" tabindex="-1"></a><span class="ex">/home/trusty/.ssh/known_hosts</span><span class="kw">;</span><span class="ex">2023-02-20_19-22-48</span></span></code></pre></div>
+<ol start="5" type="1">
+<li>Použití nepovinného přepínače <code>-r</code>:</li>
+</ol>
+<div class="sourceCode" id="cb7"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb7-1"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> date</span>
+<span id="cb7-2"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Sat</span> Feb 25 09:00:04 AM CET 2023</span>
+<span id="cb7-3"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mole list <span class="at">-r</span> <span class="at">-b</span> 2023-02-24 ~/proj1</span>
+<span id="cb7-4"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="ex">.git/COMMIT_EDITMSG:</span> git</span>
+<span id="cb7-5"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="ex">.git/config:</span>         git</span>
+<span id="cb7-6"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="ex">.git/info/exclude:</span>   git</span>
+<span id="cb7-7"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="ex">main.c:</span>              project</span>
+<span id="cb7-8"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="ex">README.md:</span>           project_readme</span>
+<span id="cb7-9"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="ex">struct.c:</span>            project</span>
+<span id="cb7-10"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="ex">struct.h:</span>            project</span>
+<span id="cb7-11"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mole <span class="at">-m</span> <span class="at">-r</span> <span class="at">-b</span> 2023-02-24 ~/proj1</span>
+<span id="cb7-12"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="ex">...</span> <span class="co"># spustí se editace souboru ~/proj1/.git/COMMIT_EDITMSG nebo ~/proj1/.git/config</span></span>
+<span id="cb7-13"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mole <span class="at">-r</span> <span class="at">-m</span> <span class="at">-g</span> git <span class="at">-b</span> 2023-02-24 ~/proj1</span>
+<span id="cb7-14"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="ex">...</span> <span class="co"># spustí se editace souboru ~/proj1/.git/config</span></span></code></pre></div>
+<ol start="6" type="1">
+<li>Použití nepovinného přepínače <code>-d</code>:</li>
+</ol>
+<div class="sourceCode" id="cb8"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb8-1"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> date</span>
+<span id="cb8-2"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Sat</span> Feb 25 09:08:10 AM CET 2023</span>
+<span id="cb8-3"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mole list <span class="at">-d</span> <span class="at">-b</span> 2023-02-20 <span class="va">$HOME</span></span>
+<span id="cb8-4"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="ex">.indent.pro:</span> <span class="at">-</span></span>
+<span id="cb8-5"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="ex">.viminfo:</span>    <span class="at">-</span></span>
+<span id="cb8-6"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mole list <span class="at">-a</span> 2023-02-23 <span class="at">-d</span> <span class="va">$HOME</span></span>
+<span id="cb8-7"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="ex">.bashrc:</span>     <span class="at">-</span></span>
+<span id="cb8-8"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="ex">.indent.pro:</span> <span class="at">-</span></span>
+<span id="cb8-9"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="ex">.vimrc:</span>      <span class="at">-</span></span>
+<span id="cb8-10"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mole <span class="at">-m</span> <span class="at">-d</span> <span class="at">-b</span> 2023-02-20 ~</span>
+<span id="cb8-11"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="ex">...</span> <span class="co"># spustí se editace souboru ~/.indent.pro nebo ~/.viminfo</span></span>
+<span id="cb8-12"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb8-12" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mole <span class="at">-m</span> <span class="at">-d</span> <span class="at">-g</span> bash <span class="at">-b</span> 2023-02-20 ~</span>
+<span id="cb8-13"><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="ex">...</span> <span class="co"># ! chyba, přepínače -d a -g jsou výlučné</span></span></code></pre></div></div>
+            <div class="d-none d-xl-block col-xl-2 bd-toc">
+               <ul class="section-nav">
+                  <li class="toc-entry"><ul>
+<li><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#popis-%C3%BAlohy" id="toc-popis-úlohy">Popis úlohy</a></li>
+<li><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#specifikace-chov%C3%A1n%C3%AD-skriptu" id="toc-specifikace-chování-skriptu">Specifikace chování
+skriptu</a></li>
+<li><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#popis" id="toc-popis">Popis</a></li>
+<li><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#filtry" id="toc-filtry">Filtry</a></li>
+<li><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#nastaven%C3%AD-a-konfigurace" id="toc-nastavení-a-konfigurace">Nastavení a konfigurace</a></li>
+<li><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#form%C3%A1t-tajn%C3%A9ho-logu" id="toc-formát-tajného-logu">Formát
+tajného logu</a></li>
+<li><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#pozn%C3%A1mky" id="toc-poznámky">Poznámky</a></li>
+<li><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#n%C3%A1vratov%C3%A1-hodnota" id="toc-návratová-hodnota">Návratová
+hodnota</a></li>
+<li><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#implementa%C4%8Dn%C3%AD-detaily" id="toc-implementační-detaily">Implementační detaily</a></li>
+<li><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#mo%C5%BEn%C3%A1-roz%C5%A1%C3%AD%C5%99en%C3%AD" id="toc-možná-rozšíření">Možná
+rozšíření</a></li>
+<li><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#odevzd%C3%A1v%C3%A1n%C3%AD" id="toc-odevzdávání">Odevzdávání</a></li>
+<li><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#rady" id="toc-rady">Rady</a></li>
+<li><a href="file:///Users/ondra/teaching/ios/ios-23-1/zadani_reseni/README.html#p%C5%99%C3%ADklady-pou%C5%BEit%C3%AD" id="toc-příklady-použití">Příklady
+použití</a></li>
+</ul></li>
+               </ul>
+            </div>
+         </div>
+               </div>
+            <!-- Add comment hosting service here -->
+            <!-- Footer -->
+            <footer class="footer text-muted">
+               <div align="center">
+                  <!-- Please keep the following line -->
+                  Built with <a href="https://www.pandoc.org/" target="_blank" rel="noopener">Pandoc</a> 
+                  using <a href="https://github.com/ashki23/pandoc-bootstrap" target="_blank" rel="noopener">pandoc-bootstrap</a> theme
+                  <br>
+               </div>
+            </footer>
+            <!-- Add global site tag (gtag.js) and site analytics here -->
+            <!-- JS, Popper.js, and jQuery -->
+      <script src="./1. Úloha IOS (2023)_files/jquery-3.5.1.slim.min.js.Без названия" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="./1. Úloha IOS (2023)_files/popper.min.js.Без названия" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="./1. Úloha IOS (2023)_files/bootstrap.min.js.Без названия" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+      <!-- Mathjax -->
+      <script src="./1. Úloha IOS (2023)_files/polyfill.min.js.Без названия"></script>
+      <script id="MathJax-script" async="" src="./1. Úloha IOS (2023)_files/tex-mml-chtml.js.Без названия"></script>
+      <script>
+         /* Bootstrap styles to tables */
+         function bootstrapStylePandocTables() {
+         $('tr.header').parent('thead').parent('table').addClass('table table-condensed'); }
+         $(document).ready(function () { bootstrapStylePandocTables(); });
+         /* Adjust the height when click the toc */
+         var shiftWindow = function() { scrollBy(0, -60) };
+         window.addEventListener("hashchange", shiftWindow);
+         function load() { if (window.location.hash) shiftWindow(); }
+      </script>
+   
+
+</body></html>
